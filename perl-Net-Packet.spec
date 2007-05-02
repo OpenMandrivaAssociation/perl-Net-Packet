@@ -1,6 +1,6 @@
 %define module	Net-Packet
 %define name	perl-%{module}
-%define version 2.22
+%define version 3.25
 %define release %mkrel 1
 
 Name:		%{name}
