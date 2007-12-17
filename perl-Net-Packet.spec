@@ -19,7 +19,6 @@ BuildRequires:	perl(IO::Interface)
 BuildRequires:	perl(Net::IPv6Addr)
 BuildRequires:	perl-Net-Pcap >= 0.04
 BuildRequires:	perl(Socket6)
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This module is a unified framework to craft, send and receive
