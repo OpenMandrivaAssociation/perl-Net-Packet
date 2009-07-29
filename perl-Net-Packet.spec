@@ -1,25 +1,25 @@
-%define module	Net-Packet
-%define name	perl-%{module}
-%define version 3.26
-%define release %mkrel 2
+%define upstream_name	 Net-Packet
+%define upstream_version 3.26
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	A framework to easily send and receive frames from layer 2 to layer 7
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{module}/
-Source:		http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.bz2
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	chrpath
 BuildRequires:	libpcap-devel
 BuildRequires:	perl-Class-Gomor-Hash >= 0.20
-BuildRequires:	perl-devel
 BuildRequires:	perl(IO::Interface)
 BuildRequires:	perl(Net::IPv6Addr)
 BuildRequires:	perl-Net-Pcap >= 0.04
 BuildRequires:	perl(Socket6)
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRequires:	perl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module is a unified framework to craft, send and receive
@@ -33,7 +33,7 @@ you want some layer 2, 3 or 4 protocol encoding/decoding to be
 added, just ask, and give a corresponding .pcap file ;)
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -58,4 +58,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/Net
 %{perl_vendorarch}/auto/Net
 %{_mandir}/*/*
-
