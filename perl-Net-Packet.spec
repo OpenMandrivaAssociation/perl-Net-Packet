@@ -1,5 +1,5 @@
 %define upstream_name	 Net-Packet
-%define upstream_version 3.26
+%define upstream_version 3.27
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:	A framework to easily send and receive frames from layer 2 to layer 7
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	chrpath
 BuildRequires:	libpcap-devel
