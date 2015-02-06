@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	4
 
 Summary:	A framework to easily send and receive frames from layer 2 to layer 7
 License:	GPL+ or Artistic
