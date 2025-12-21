@@ -11,6 +11,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{upstream_name}/
 Source0:	http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.gz
 
+BuildRequires:	make
 BuildRequires:	chrpath
 BuildRequires:	pcap-devel
 BuildRequires:	perl(Bit::Vector)
