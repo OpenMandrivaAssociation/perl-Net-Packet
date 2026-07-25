@@ -1,15 +1,15 @@
 %define upstream_name	 Net-Packet
-%define upstream_version 3.27
+%define upstream_version 3.28
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	A framework to easily send and receive frames from layer 2 to layer 7
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Net-Packet
+Source0:	https://cpan.metacpan.org/authors/id/G/GO/GOMOR/Net-Packet-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	chrpath
