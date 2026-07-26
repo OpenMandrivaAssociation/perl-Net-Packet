@@ -1,15 +1,13 @@
 %define upstream_name	 Net-Packet
-%define upstream_version 3.28
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	3.28
+Release:	2
 
 Summary:	A framework to easily send and receive frames from layer 2 to layer 7
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Net-Packet
-Source0:	https://cpan.metacpan.org/authors/id/G/GO/GOMOR/Net-Packet-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/G/GO/GOMOR/Net-Packet-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	chrpath
@@ -38,7 +36,7 @@ you want some layer 2, 3 or 4 protocol encoding/decoding to be
 added, just ask, and give a corresponding .pcap file ;)
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -62,9 +60,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Wed Jul 29 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 3.260.0-1mdv2010.0
 + Revision: 404111
-- rebuild using %%perl_convert_version
-
-* Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 3.26-2mdv2009.0
+- rebuild using %3.28 Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 3.26-2mdv2009.0
 + Revision: 268625
 - rebuild early 2009.0 package (before pixel changes)
 
